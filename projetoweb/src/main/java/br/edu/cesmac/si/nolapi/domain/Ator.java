@@ -1,40 +1,38 @@
 package br.edu.cesmac.si.nolapi.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 @Entity
 public class Ator {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long idAutor;
+    private Long idAtor;
     private String nome;
-    private Date dataNascimento;
     private String sexo;
     private String biografia;
+    private Date dataNascimento;
 
+    public Ator(){
 
-    public Ator() {
     }
 
-    public Ator(Long idAutor, String nome, Date dataNascimento, String sexo, String biografia){
-        this.idAutor = idAutor;
+    public Ator(Long idAtor, String nome, String sexo, String biografia, Date dataNascimento){
+        this.idAtor = idAtor;
         this.nome = nome;
-        this.dataNascimento = dataNascimento;
         this.sexo = sexo;
         this.biografia = biografia;
+        this.dataNascimento = dataNascimento;
     }
 
-    public Long getIdAutor() {
-        return idAutor;
+    public Long getIdAtor() {
+        return idAtor;
     }
 
-    public void setIdAutor(Long idAutor) {
-        this.idAutor = idAutor;
+    public void setIdAtor(Long idAtor) {
+        this.idAtor = idAtor;
     }
 
     public String getNome() {
@@ -43,14 +41,6 @@ public class Ator {
 
     public void setNome(String nome) {
         this.nome = nome;
-    }
-
-    public Date getDataNascimento() {
-        return dataNascimento;
-    }
-
-    public void setDataNascimento(Date dataNascimento) {
-        this.dataNascimento = dataNascimento;
     }
 
     public String getSexo() {
@@ -67,5 +57,13 @@ public class Ator {
 
     public void setBiografia(String biografia) {
         this.biografia = biografia;
+    }
+
+    public Date getDataNascimento() {
+        return dataNascimento;
+    }
+
+    public void setDataNascimento(Date dataNascimento) {
+        this.dataNascimento = dataNascimento;
     }
 }

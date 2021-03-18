@@ -1,7 +1,8 @@
 package br.edu.cesmac.si.nolapi.domain;
+
 import javax.persistence.*;
 import java.util.Date;
-
+import java.util.List;
 
 @Entity
 public class Filme {
@@ -14,7 +15,7 @@ public class Filme {
     private String sinopse;
 
     @OneToMany
-    private Ator ator;
+    private List<Ator> atores;
 
     @OneToOne
     private Genero genero;
@@ -62,19 +63,19 @@ public class Filme {
         this.sinopse = sinopse;
     }
 
-    public Ator getAtor() {
-        return ator;
-    }
-
-    public void setAtor(Ator ator) {
-        this.ator = ator;
-    }
-
     public Genero getGenero() {
         return genero;
     }
 
     public void setGenero(Genero genero) {
         this.genero = genero;
+    }
+
+    public List<Ator> getAtores() {
+        return atores;
+    }
+
+    public void setAtores(List<Ator> atores) {
+        this.atores = atores;
     }
 }

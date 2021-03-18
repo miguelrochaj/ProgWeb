@@ -1,10 +1,9 @@
 package br.edu.cesmac.si.nolapi.repository;
 
-import br.edu.cesmac.si.nolapi.domain.Editoria;
+import br.edu.cesmac.si.nolapi.domain.Filme;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
 @Repository
-public interface EditoriaRepository extends JpaRepository<Editoria, Long> {
-
+public interface FilmeRepository extends JpaRepository<Filme, Long> {
 }
